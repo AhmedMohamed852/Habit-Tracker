@@ -11,6 +11,8 @@ import lombok.*;
 @NoArgsConstructor
 public class UserDtoRequest {
 
+
+
     @NotBlank(message = "your.name.must.not.be.blank")
     private String fullName;
 

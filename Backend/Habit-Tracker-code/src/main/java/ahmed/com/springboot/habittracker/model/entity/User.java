@@ -13,7 +13,6 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
 public class User extends BaseEntity {
@@ -24,17 +23,16 @@ public class User extends BaseEntity {
     @Column(nullable = false, unique = true)
     private String userName;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @Column(nullable = false, length = 100)
-    private String password;
-
     private String profilePicture;
 
     @Column(length = 20)
     private String country;
 
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false, length = 255)
+    private String password;
 
     // ToDo __________________- Relations -_____________________________
 
